@@ -1,4 +1,4 @@
-# api/metrics.py
+# app.py
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -12,7 +12,7 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
-    allow_methods=["POST"],   # only POST required by your spec
+    allow_methods=["POST"],
     allow_headers=["*"],
 )
 
@@ -20,9 +20,8 @@ class Query(BaseModel):
     regions: List[str]
     threshold_ms: float
 
-# robust path: project root (api/ is one level down)
-BASE = Path(__file__).resolve().parents[1]
-DATA_FILE = BASE / "q-vercel-latency.json"
+# Robust path: assumes JSON is in the same folder as app.py
+DATA_FILE = Path(__file__).parent / "q-vercel-latency.json"
 
 def p95_nearest_rank(values):
     if not values:
