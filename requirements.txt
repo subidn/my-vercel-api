@@ -1,7 +1,3 @@
-<<<<<<< HEAD
+fastapi
+uvicorn[standard]
 numpy
-vercel
-=======
-numpy
-vercel
->>>>>>> d5d859f (ready for Vercel deployment)
