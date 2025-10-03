@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 numpy
 vercel
+=======
+numpy
+vercel
+>>>>>>> d5d859f (ready for Vercel deployment)
