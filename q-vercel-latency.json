@@ -250,9 +250,5 @@
     "latency_ms": 225.5,
     "uptime_pct": 98.035,
     "timestamp": 20250312
-  }
-<<<<<<< HEAD
-]
-=======
-]
->>>>>>> d5d859f (ready for Vercel deployment)
+  }]
+  
